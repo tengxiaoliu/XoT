@@ -1,4 +1,3 @@
-
 python src/analyze.py \
   --plan outputs/gsm/plan/demo_plan_0_end.jsonl \
   --cot outputs/gsm/cot/demo_cot_0_end.jsonl \
