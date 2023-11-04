@@ -17,6 +17,8 @@ pip -r requirements.txt
 
 ### Generate XoT results
 
+Please put your api key in the Line 24 of `brain.py` file.
+
 We here provide the command to generate XoT results on GSM8K. To run the code on other datasets, please change the `--dataset` argument accordingly.
 
 ```
@@ -33,6 +35,8 @@ To run the script, please use the following command:
 ```
 bash scripts/eval_gsm.sh
 ```
+You can also directly run the analysis with the above command using the output files we produced in the `outputs/gsm` folder.
+
 
 ## Questions
 This repo is still under construction. 

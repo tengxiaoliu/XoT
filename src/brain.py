@@ -21,7 +21,7 @@ from utils import *
 
 KEY_GROUP = {
     'a': [
-        "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"
+        "YOUR_API_KEY"
     ]
 }
 

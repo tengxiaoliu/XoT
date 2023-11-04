@@ -53,16 +53,16 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     dataset_paths = {
-        'gsm': 'data/v8/gsm.jsonl',
-        'gsmhard': 'data/raw/math/gsmhard.jsonl',
-        'algebra': 'data/raw/algebra/test.jsonl',
-        'addsub': 'data/raw/math/mawpsaddsub.jsonl',
-        'singleop': 'data/raw/math/mawpssingleop.jsonl',
-        'singleeq': 'data/raw/math/mawpssingleeq.jsonl',
-        'multiarith': 'data/raw/math/mawpsmultiarith.jsonl',
-        'svamp': 'data/raw/math/svamp.jsonl',
-        'asdiv': 'data/raw/math/asdiv.jsonl',
-        'aqua': 'data/raw/math/aqua.jsonl',
+        'gsm': 'data/gsm8k/test.jsonl',
+        'gsmhard': 'data/gsmhard.jsonl',
+        'algebra': 'data/algebra/test.jsonl',
+        'addsub': 'data/mawpsaddsub.jsonl',
+        'singleop': 'data/mawpssingleop.jsonl',
+        'singleeq': 'data/mawpssingleeq.jsonl',
+        'multiarith': 'data/mawpsmultiarith.jsonl',
+        'svamp': 'data/svamp.jsonl',
+        'asdiv': 'data/asdiv.jsonl',
+        'aqua': 'data/aqua.jsonl',
     }
 
     if len(args.data_path) == 0:
@@ -144,7 +144,7 @@ if __name__ == "__main__":
         output_json = json.dumps(metric)
         f.write(output_json + '\n')
 
-    if not args.debug:
+    if not args.debug and args.enable_wandb:
         wandb.log(metric)
 
     print(f"Save results at {brain.result_path}")
